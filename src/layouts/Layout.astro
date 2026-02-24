@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Farhan Hussain - Developer Relations & Technical Content" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col selection:bg-indigo-100 selection:text-indigo-900">
+		<main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 md:py-20 lg:py-24">
+			<slot />
+		</main>
+		<footer class="w-full text-center py-8 text-slate-500 text-sm">
+			<p>&copy; {new Date().getFullYear()} Farhan Hussain. Built with Astro & Tailwind CSS.</p>
+		</footer>
+	</body>
+</html>
