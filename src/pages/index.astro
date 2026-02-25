@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Farhan Hussain | Developer Relations">
-	<section class="flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-8 mb-24">
-		<div class="max-w-xl">
-			<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6 font-inter text-center md:text-left">
+	<section class="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mb-24">
+		<div class="flex-1 max-w-2xl">
+			<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6 font-inter text-center md:text-left">
 				Hi, I'm <span class="text-indigo-600">Farhan Hussain</span>.
 			</h1>
 			<p class="text-lg md:text-xl text-slate-600 leading-relaxed mb-8 text-center md:text-left">
@@ -13,6 +13,11 @@ import Layout from '../layouts/Layout.astro';
 				I specialize in bridging the gap between developers and products through 
 				clear, engaging, and highly technical content, tutorials, and talks.
 			</p>
+			<div class="flex items-center justify-center md:justify-start gap-4">
+				<a href="https://www.linkedin.com/in/farhan-hussain/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 shadow-sm">
+					Let's connect
+				</a>
+			</div>
 		</div>
 		<div class="flex-shrink-0 sm:mt-4 md:mt-0">
 			<img 
@@ -31,8 +36,11 @@ import Layout from '../layouts/Layout.astro';
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			<!-- Video Card 1 -->
 			<a href="https://www.youtube.com/watch?v=3OEnY7S8YPY" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
-				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Video &bull; Copilot Studio</div>
-				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Build Your First AI Agent That Can Send Emails</h3>
+				<div class="mb-3">
+					<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-50 text-red-600 border border-red-100 mr-2">Video</span>
+					<span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Copilot Studio</span>
+				</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors leading-snug">Build Your First AI Agent That Can Send Emails</h3>
 				<p class="text-slate-600 text-sm mb-4 line-clamp-2">In this video we will explore how Microsoft Copilot Studio allows you to build an AI agent that can send emails on your behalf from scratch.</p>
 				<span class="text-indigo-600 text-sm font-medium flex items-center">
 					Watch Video <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -40,8 +48,11 @@ import Layout from '../layouts/Layout.astro';
 			</a>
 			<!-- Video Card 2 -->
 			<a href="https://www.youtube.com/watch?v=LJMqT-FZOXs" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
-				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Video &bull; Ollama</div>
-				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">How to Run DeepSeek R1 Locally</h3>
+				<div class="mb-3">
+					<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-50 text-red-600 border border-red-100 mr-2">Video</span>
+					<span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Ollama</span>
+				</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors leading-snug">How to Run DeepSeek R1 Locally</h3>
 				<p class="text-slate-600 text-sm mb-4 line-clamp-2">Discover how to run DeepSeek R1 locally on your own hardware using Ollama.</p>
 				<span class="text-indigo-600 text-sm font-medium flex items-center">
 					Watch Video <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -49,8 +60,11 @@ import Layout from '../layouts/Layout.astro';
 			</a>
 			<!-- Article Card 1 -->
 			<a href="https://www.schoolofmachinelearning.com/2023/10/03/how-to-run-llms-locally-on-your-laptop-using-ollama/" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
-				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Article &bull; Machine Learning</div>
-				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">How To Run LLMs Locally On Your Laptop</h3>
+				<div class="mb-3">
+					<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-600 border border-blue-100 mr-2">Article</span>
+					<span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Machine Learning</span>
+				</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors leading-snug">How To Run LLMs Locally On Your Laptop</h3>
 				<p class="text-slate-600 text-sm mb-4 line-clamp-2">A step-by-step guide on how to run large language models (LLMs) on a laptop or desktop locally without powerful GPUs using Ollama.</p>
 				<span class="text-indigo-600 text-sm font-medium flex items-center">
 					Read Article <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -58,8 +72,11 @@ import Layout from '../layouts/Layout.astro';
 			</a>
 			<!-- Article Card 2 -->
 			<a href="https://techcommunity.microsoft.com/blog/azurecommunicationservicesblog/build-your-ai-email-agent-with-microsoft-copilot-studio/4448724" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
-				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Article &bull; Microsoft Tech Community</div>
-				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Build Your AI Email Agent with Copilot Studio</h3>
+				<div class="mb-3">
+					<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-600 border border-blue-100 mr-2">Article</span>
+					<span class="text-xs font-medium text-slate-500 uppercase tracking-wider">MS Tech Community</span>
+				</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors leading-snug">Build Your AI Email Agent with Copilot Studio</h3>
 				<p class="text-slate-600 text-sm mb-4 line-clamp-2">A comprehensive tutorial on how to create an AI agent that can send emails on your behalf using Microsoft Copilot Studio and robust backend tools.</p>
 				<span class="text-indigo-600 text-sm font-medium flex items-center">
 					Read Article <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -67,8 +84,11 @@ import Layout from '../layouts/Layout.astro';
 			</a>
 			<!-- Article Card 3 -->
 			<a href="https://techcommunity.microsoft.com/blog/azurecommunicationservicesblog/build-an-ai-email-responder-with-openai-and-azure-communication-services/4421127" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
-				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Article &bull; Microsoft Tech Community</div>
-				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Build an AI Email Responder with OpenAI & Azure</h3>
+				<div class="mb-3">
+					<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-600 border border-blue-100 mr-2">Article</span>
+					<span class="text-xs font-medium text-slate-500 uppercase tracking-wider">MS Tech Community</span>
+				</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors leading-snug">Build an AI Email Responder with OpenAI & Azure</h3>
 				<p class="text-slate-600 text-sm mb-4 line-clamp-2">Learn how to automate customer support and repetitive queries using OpenAI and Azure Communication Services in this detailed guide.</p>
 				<span class="text-indigo-600 text-sm font-medium flex items-center">
 					Read Article <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -76,8 +96,11 @@ import Layout from '../layouts/Layout.astro';
 			</a>
 			<!-- Video Card 3 -->
 			<a href="https://www.youtube.com/watch?v=BenjvaGYIwM" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
-				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Video &bull; DeepSeek Tutorial</div>
-				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Run DeepSeek-R1 Offline: Chat Interface + PDF RAG</h3>
+				<div class="mb-3">
+					<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-50 text-red-600 border border-red-100 mr-2">Video</span>
+					<span class="text-xs font-medium text-slate-500 uppercase tracking-wider">DeepSeek Tutorial</span>
+				</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors leading-snug">Run DeepSeek-R1 Offline: Chat Interface + PDF RAG</h3>
 				<p class="text-slate-600 text-sm mb-4 line-clamp-2">In this video, I’ll show you exactly how to deploy DeepSeek-R1 locally with a clean, modern chat interface and PDF RAG capabilities.</p>
 				<span class="text-indigo-600 text-sm font-medium flex items-center">
 					Watch Video <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -89,38 +112,38 @@ import Layout from '../layouts/Layout.astro';
 	<!-- Proof Metrics Strip -->
 	<section class="mb-24 mt-12 pt-12 border-t border-slate-200">
 		<h2 class="sr-only">Impact Metrics</h2>
-		<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center mb-8">
-			<div class="flex flex-col items-center">
-				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">9k+</span>
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 text-center mb-8 divide-none md:divide-x divide-slate-200">
+			<div class="flex flex-col items-center md:px-4">
+				<span class="text-3xl lg:text-4xl font-bold tracking-tight text-indigo-600 mb-1">9k+</span>
 				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">Newsletter Subs</span>
 				<a href="https://learnml.substack.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for newsletter subscribers">Source: Newsletter</a>
 			</div>
-			<div class="flex flex-col items-center">
-				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">2M+</span>
+			<div class="flex flex-col items-center md:px-4">
+				<span class="text-3xl lg:text-4xl font-bold tracking-tight text-indigo-600 mb-1">2M+</span>
 				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">YouTube Views</span>
-				<div class="flex items-center gap-1 text-xs text-slate-400">
-					<span>Source: YouTube</span>
-					<div class="flex">
+				<div class="flex items-center justify-center flex-wrap gap-1 text-xs text-slate-400">
+					<span>Source: YT</span>
+					<div class="flex items-center">
 						<span>(</span><a href="https://www.youtube.com/@FarhanHussain" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for Personal YouTube views">Personal</a>
 						<span class="mx-0.5">&amp;</span>
 						<a href="https://www.youtube.com/@SchoolofMachineLearning" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for ML YouTube views">ML</a><span>)</span>
 					</div>
 				</div>
 			</div>
-			<div class="flex flex-col items-center">
-				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">20k+</span>
+			<div class="flex flex-col items-center md:px-4">
+				<span class="text-3xl lg:text-4xl font-bold tracking-tight text-indigo-600 mb-1">20k+</span>
 				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">Subscribers</span>
-				<div class="flex items-center gap-1 text-xs text-slate-400">
-					<span>Source: YouTube</span>
-					<div class="flex">
+				<div class="flex items-center justify-center flex-wrap gap-1 text-xs text-slate-400">
+					<span>Source: YT</span>
+					<div class="flex items-center">
 						<span>(</span><a href="https://www.youtube.com/@FarhanHussain" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for Personal YouTube subscribers">Personal</a>
 						<span class="mx-0.5">&amp;</span>
 						<a href="https://www.youtube.com/@SchoolofMachineLearning" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for ML YouTube subscribers">ML</a><span>)</span>
 					</div>
 				</div>
 			</div>
-			<div class="flex flex-col items-center">
-				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">18M+</span>
+			<div class="flex flex-col items-center md:px-4">
+				<span class="text-3xl lg:text-4xl font-bold tracking-tight text-indigo-600 mb-1">18M+</span>
 				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">Pageviews</span>
 				<a href="https://maypalo.com" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for site pageviews">Source: Site analytics</a>
 			</div>
@@ -239,10 +262,12 @@ import Layout from '../layouts/Layout.astro';
 			Connect with me
 		</h2>
 		<div class="flex flex-wrap items-center justify-center gap-4">
-			<a href="http://github.com/farhanleo23/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-50 hover:text-slate-900 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm">
+			<a href="http://github.com/farhanleo23/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-50 hover:text-slate-900 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
 				GitHub
 			</a>
-			<a href="https://x.com/farhanleo23" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-50 hover:text-slate-900 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm">
+			<a href="https://x.com/farhanleo23" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-50 hover:text-slate-900 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
 				Twitter / X
 			</a>
 			<div class="relative group mt-6 sm:mt-0">
@@ -251,8 +276,9 @@ import Layout from '../layouts/Layout.astro';
 						Best way to reach me! <span class="inline-block translate-y-2 translate-x-1 rotate-45 text-lg">↴</span>
 					</span>
 				</div>
-			    <a href="https://www.linkedin.com/in/farhan-hussain/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-sm relative z-10 w-full sm:w-auto">
-				    LinkedIn
+			    <a href="https://www.linkedin.com/in/farhan-hussain/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-sm relative z-10 w-full sm:w-auto">
+				    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+					LinkedIn
 			    </a>
             </div>
 		</div>
