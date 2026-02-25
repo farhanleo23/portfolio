@@ -3,15 +3,24 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Farhan Hussain | Developer Relations">
-	<section class="max-w-2xl mb-24">
-		<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6 font-inter">
-			Hi, I'm <span class="text-indigo-600">Farhan Hussain</span>.
-		</h1>
-		<p class="text-lg md:text-xl text-slate-600 leading-relaxed mb-8">
-			I'm a Developer Relations professional and Technical Content Creator. 
-			I specialize in bridging the gap between developers and products through 
-			clear, engaging, and highly technical content, tutorials, and talks.
-		</p>
+	<section class="flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-8 mb-24">
+		<div class="max-w-xl">
+			<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6 font-inter text-center md:text-left">
+				Hi, I'm <span class="text-indigo-600">Farhan Hussain</span>.
+			</h1>
+			<p class="text-lg md:text-xl text-slate-600 leading-relaxed mb-8 text-center md:text-left">
+				I'm a Developer Relations professional and Technical Content Creator. 
+				I specialize in bridging the gap between developers and products through 
+				clear, engaging, and highly technical content, tutorials, and talks.
+			</p>
+		</div>
+		<div class="flex-shrink-0 sm:mt-4 md:mt-0">
+			<img 
+				src="/farhanprofile.jpg" 
+				alt="Farhan Hussain Profile" 
+				class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-lg ring-1 ring-slate-100"
+			/>
+		</div>
 	</section>
 
 	<!-- Featured Content Section -->
@@ -20,24 +29,112 @@ import Layout from '../layouts/Layout.astro';
 			Featured Content
 		</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<!-- Article Card -->
-			<a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
-				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Article &bull; DEV.to</div>
-				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Building scalable APIs with Next.js</h3>
-				<p class="text-slate-600 text-sm mb-4 line-clamp-2">Learn how to leverage Next.js API Routes properly to build a robust backend for your frontend application without leaving the context of your repository.</p>
-				<span class="text-indigo-600 text-sm font-medium flex items-center">
-					Read Article <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
-				</span>
-			</a>
-			<!-- Talk/Video Card -->
-			<a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
-				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Talk &bull; React Conf</div>
-				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Developer Experience is Product Experience</h3>
-				<p class="text-slate-600 text-sm mb-4 line-clamp-2">A talk on why investing in great SDKs, intuitive APIs, and comprehensive documentation leads directly to increased product adoption and user satisfaction.</p>
+			<!-- Video Card 1 -->
+			<a href="https://www.youtube.com/watch?v=3OEnY7S8YPY" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
+				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Video &bull; Copilot Studio</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Build Your First AI Agent That Can Send Emails</h3>
+				<p class="text-slate-600 text-sm mb-4 line-clamp-2">In this video we will explore how Microsoft Copilot Studio allows you to build an AI agent that can send emails on your behalf from scratch.</p>
 				<span class="text-indigo-600 text-sm font-medium flex items-center">
 					Watch Video <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
 				</span>
 			</a>
+			<!-- Video Card 2 -->
+			<a href="https://www.youtube.com/watch?v=LJMqT-FZOXs" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
+				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Video &bull; Ollama</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">How to Run DeepSeek R1 Locally</h3>
+				<p class="text-slate-600 text-sm mb-4 line-clamp-2">Discover how to run DeepSeek R1 locally on your own hardware using Ollama.</p>
+				<span class="text-indigo-600 text-sm font-medium flex items-center">
+					Watch Video <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
+				</span>
+			</a>
+			<!-- Article Card 1 -->
+			<a href="https://www.schoolofmachinelearning.com/2023/10/03/how-to-run-llms-locally-on-your-laptop-using-ollama/" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
+				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Article &bull; Machine Learning</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">How To Run LLMs Locally On Your Laptop</h3>
+				<p class="text-slate-600 text-sm mb-4 line-clamp-2">A step-by-step guide on how to run large language models (LLMs) on a laptop or desktop locally without powerful GPUs using Ollama.</p>
+				<span class="text-indigo-600 text-sm font-medium flex items-center">
+					Read Article <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
+				</span>
+			</a>
+			<!-- Article Card 2 -->
+			<a href="https://techcommunity.microsoft.com/blog/azurecommunicationservicesblog/build-your-ai-email-agent-with-microsoft-copilot-studio/4448724" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
+				<div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Article &bull; Microsoft Tech Community</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Build Your AI Email Agent with Copilot Studio</h3>
+				<p class="text-slate-600 text-sm mb-4 line-clamp-2">A comprehensive tutorial on how to create an AI agent that can send emails on your behalf using Microsoft Copilot Studio and robust backend tools.</p>
+				<span class="text-indigo-600 text-sm font-medium flex items-center">
+					Read Article <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
+				</span>
+			</a>
+		</div>
+	</section>
+
+	<!-- Proof Metrics Strip -->
+	<section class="mb-24 mt-12 pt-12 border-t border-slate-200">
+		<h2 class="sr-only">Impact Metrics</h2>
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
+			<div class="flex flex-col items-center">
+				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">9k+</span>
+				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider">Newsletter Subs</span>
+			</div>
+			<div class="flex flex-col items-center">
+				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">1.5M+</span>
+				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider">YouTube Views</span>
+			</div>
+			<div class="flex flex-col items-center">
+				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">20k+</span>
+				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider">Subscribers</span>
+			</div>
+			<div class="flex flex-col items-center">
+				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">18M+</span>
+				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider">Pageviews</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- Past Projects Section -->
+	<section class="mb-24">
+		<div class="mb-8">
+			<h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 mb-2">
+				Past projects & properties
+			</h2>
+			<p class="text-slate-500">
+				Previous work included as portfolio proof (not actively maintained).
+			</p>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<!-- Past Project Card 1: Maypalo -->
+			<div class="flex flex-col p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+				<div class="flex items-center justify-between mb-4">
+					<h3 class="text-xl font-bold text-slate-900">Maypalo</h3>
+					<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 border border-slate-200">
+						Past project
+					</span>
+				</div>
+				<p class="text-sm font-medium text-slate-500 mb-3">Founder (2010&ndash;2017)</p>
+				<p class="text-slate-600 text-sm mb-6 flex-grow">
+					Grew Maypalo into a top-100 gadget blog globally. Built content + community at scale.
+				</p>
+				<a href="https://maypalo.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-indigo-600 bg-indigo-50 hover:bg-indigo-100 rounded-lg transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 w-fit" aria-label="Visit Maypalo site">
+					Visit site <span class="ml-1" aria-hidden="true">&rarr;</span>
+				</a>
+			</div>
+			
+			<!-- Past Project Card 2: School of Machine Learning -->
+			<div class="flex flex-col p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+				<div class="flex items-center justify-between mb-4">
+					<h3 class="text-xl font-bold text-slate-900">School of Machine Learning</h3>
+					<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 border border-slate-200">
+						Past project
+					</span>
+				</div>
+				<p class="text-sm font-medium text-slate-500 mb-3">Creator (2023&ndash;2024)</p>
+				<p class="text-slate-600 text-sm mb-6 flex-grow">
+					Created beginner-friendly ML courses and grew an AI newsletter to 9,000+ subscribers.
+				</p>
+				<a href="https://www.schoolofmachinelearning.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-indigo-600 bg-indigo-50 hover:bg-indigo-100 rounded-lg transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 w-fit" aria-label="Visit School of Machine Learning site">
+					Visit site <span class="ml-1" aria-hidden="true">&rarr;</span>
+				</a>
+			</div>
 		</div>
 	</section>
 
@@ -69,16 +166,23 @@ import Layout from '../layouts/Layout.astro';
 		<h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 mb-8 text-center">
 			Connect with me
 		</h2>
-		<div class="flex flex-wrap justify-center gap-4">
+		<div class="flex flex-wrap items-center justify-center gap-4">
 			<a href="http://github.com/farhanleo23/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-50 hover:text-slate-900 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm">
 				GitHub
 			</a>
 			<a href="https://x.com/farhanleo23" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-50 hover:text-slate-900 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm">
 				Twitter / X
 			</a>
-            <a href="https://www.linkedin.com/in/farhan-hussain/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-50 hover:text-slate-900 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm">
-				LinkedIn
-			</a>
+			<div class="relative group mt-6 sm:mt-0">
+				<div class="absolute -top-10 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center pointer-events-none w-max">
+					<span class="font-handwriting text-slate-500 text-[15px] -rotate-6">
+						Best way to reach me! <span class="inline-block translate-y-2 translate-x-1 rotate-45 text-lg">↴</span>
+					</span>
+				</div>
+			    <a href="https://www.linkedin.com/in/farhan-hussain/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-sm relative z-10 w-full sm:w-auto">
+				    LinkedIn
+			    </a>
+            </div>
 		</div>
 	</section>
 </Layout>
