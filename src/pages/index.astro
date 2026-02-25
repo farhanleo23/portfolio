@@ -71,23 +71,47 @@ import Layout from '../layouts/Layout.astro';
 	<!-- Proof Metrics Strip -->
 	<section class="mb-24 mt-12 pt-12 border-t border-slate-200">
 		<h2 class="sr-only">Impact Metrics</h2>
-		<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center mb-8">
 			<div class="flex flex-col items-center">
 				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">9k+</span>
-				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider">Newsletter Subs</span>
+				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">Newsletter Subs</span>
+				<a href="https://learnml.substack.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for newsletter subscribers">Source: Newsletter</a>
 			</div>
 			<div class="flex flex-col items-center">
-				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">1.5M+</span>
-				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider">YouTube Views</span>
+				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">2M+</span>
+				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">YouTube Views</span>
+				<div class="flex items-center gap-1 text-xs text-slate-400">
+					<span>Source: YouTube</span>
+					<div class="flex">
+						<span>(</span><a href="https://www.youtube.com/@FarhanHussain" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for Personal YouTube views">Personal</a>
+						<span class="mx-0.5">&amp;</span>
+						<a href="https://www.youtube.com/@SchoolofMachineLearning" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for ML YouTube views">ML</a><span>)</span>
+					</div>
+				</div>
 			</div>
 			<div class="flex flex-col items-center">
 				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">20k+</span>
-				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider">Subscribers</span>
+				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">Subscribers</span>
+				<div class="flex items-center gap-1 text-xs text-slate-400">
+					<span>Source: YouTube</span>
+					<div class="flex">
+						<span>(</span><a href="https://www.youtube.com/@FarhanHussain" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for Personal YouTube subscribers">Personal</a>
+						<span class="mx-0.5">&amp;</span>
+						<a href="https://www.youtube.com/@SchoolofMachineLearning" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for ML YouTube subscribers">ML</a><span>)</span>
+					</div>
+				</div>
 			</div>
 			<div class="flex flex-col items-center">
 				<span class="text-3xl md:text-4xl font-bold tracking-tight text-indigo-600 mb-1">18M+</span>
-				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider">Pageviews</span>
+				<span class="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">Pageviews</span>
+				<a href="https://maypalo.com" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 rounded" aria-label="Source for site pageviews">Source: Site analytics</a>
 			</div>
+		</div>
+		<div class="text-center">
+			<p class="text-sm text-slate-500 mb-2">As of Feb 2026</p>
+			<p class="text-xs text-slate-400 max-w-lg mx-auto leading-relaxed">
+				* Metrics are approximate and pulled from platform analytics (YouTube Studio, newsletter platform, site analytics).
+			</p>
 		</div>
 	</section>
 
