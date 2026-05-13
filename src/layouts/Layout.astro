@@ -7,7 +7,36 @@ interface Props {
 }
 
 const { title, description = "Farhan Hussain - Developer Relations & Technical Content" } = Astro.props;
+const siteUrl = "https://farhanhussain.dev/";
+const canonicalUrl = siteUrl;
+const profileImageUrl = `${siteUrl}farhanprofile.jpg`;
 const shouldLoadCloudflareAnalytics = import.meta.env.PROD;
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "ProfilePage",
+	mainEntity: {
+		"@type": "Person",
+		name: "Farhan Hussain",
+		url: siteUrl,
+		image: profileImageUrl,
+		jobTitle: "Developer Relations Professional and Technical Content Creator",
+		description,
+		sameAs: [
+			"https://www.linkedin.com/in/farhan-hussain/",
+			"https://github.com/farhanleo23/",
+			"https://x.com/farhanleo23",
+			"https://www.youtube.com/@FarhanHussain",
+			"https://www.youtube.com/@SchoolofMachineLearning"
+		],
+		knowsAbout: [
+			"Developer Relations",
+			"Technical Content",
+			"AI Agents",
+			"Machine Learning",
+			"Local LLMs"
+		]
+	}
+};
 ---
 
 <!doctype html>
@@ -19,9 +48,21 @@ const shouldLoadCloudflareAnalytics = import.meta.env.PROD;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalUrl} />
+		<meta property="og:type" content="profile" />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={profileImageUrl} />
+		<meta property="og:site_name" content="Farhan Hussain" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={profileImageUrl} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 	</head>
 	<body class="min-h-screen overflow-x-hidden bg-[#f6f7fb] text-slate-900 font-sans antialiased flex flex-col selection:bg-indigo-100 selection:text-indigo-900">
 		<main class="flex-grow w-full max-w-5xl mx-auto px-5 py-10 sm:px-6 md:py-16 lg:py-20">
