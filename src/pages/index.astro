@@ -149,12 +149,25 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</div>
 		<div class="text-center">
-			<p class="text-sm text-slate-500 mb-2">As of March 2026</p>
+			<p id="metrics-current-month" class="text-sm text-slate-500 mb-2">As of May 2026</p>
 			<p class="text-xs text-slate-400 max-w-lg mx-auto leading-relaxed">
 				* Metrics are approximate and pulled from platform analytics (YouTube Studio, newsletter platform, site analytics).
 			</p>
 		</div>
 	</section>
+
+	<script>
+		const metricsCurrentMonth = document.getElementById('metrics-current-month');
+
+		if (metricsCurrentMonth) {
+			const currentMonth = new Intl.DateTimeFormat('en-US', {
+				month: 'long',
+				year: 'numeric',
+			}).format(new Date());
+
+			metricsCurrentMonth.textContent = `As of ${currentMonth}`;
+		}
+	</script>
 
 	<!-- Courses Section -->
 	<section class="mb-24">
