@@ -37,3 +37,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## Analytics
+
+This site uses Cloudflare Web Analytics in production. The tracking script only loads during production builds, so local development visits are not counted.

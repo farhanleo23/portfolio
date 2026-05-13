@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { title, description = "Farhan Hussain - Developer Relations & Technical Content" } = Astro.props;
+const shouldLoadCloudflareAnalytics = import.meta.env.PROD;
 ---
 
 <!doctype html>
@@ -29,5 +30,12 @@ const { title, description = "Farhan Hussain - Developer Relations & Technical C
 		<footer class="w-full border-t border-slate-200/80 text-center px-6 py-8 text-slate-500 text-sm">
 			<p>&copy; {new Date().getFullYear()} Farhan Hussain. Built with Astro & Tailwind CSS.</p>
 		</footer>
+		{shouldLoadCloudflareAnalytics && (
+			<script
+				defer
+				src="https://static.cloudflareinsights.com/beacon.min.js"
+				data-cf-beacon={JSON.stringify({ token: "318ab55ba6974195acab375d5775f94a" })}
+			></script>
+		)}
 	</body>
 </html>
