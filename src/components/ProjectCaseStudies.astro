@@ -1,0 +1,146 @@
+---
+const projects = [
+  {
+    id: 'agents', tab: 'Communication agents', category: 'Microsoft · Collaborative learning series',
+    title: 'From a first agent to its first action.',
+    description: 'Follow the path from a basic Copilot Studio agent to an email workflow, with lessons, videos, and Python code to build along.',
+    tags: ['Copilot Studio', 'Python', 'Azure Functions'],
+    image: '/work/3OEnY7S8YPY.jpg', video: '3OEnY7S8YPY',
+    caption: 'Build an AI agent that sends emails',
+    links: [
+      ['Explore the lessons', 'https://github.com/farhanhussainleo/copilot-studio-series'],
+      ['See the backend', 'https://github.com/farhanhussainleo/ai-email-agent'],
+      ['Watch on YouTube', 'https://www.youtube.com/watch?v=3OEnY7S8YPY'],
+    ],
+  },
+  {
+    id: 'support', tab: 'AI support email', category: 'Microsoft · Python demo',
+    title: 'Draft with AI. Send with a human in control.',
+    description: 'A small Streamlit app that turns a customer question into an editable email draft. Azure OpenAI writes the response; Azure Communication Services handles the send.',
+    tags: ['Streamlit', 'Azure OpenAI', 'Python'],
+    links: [
+      ['Explore the code', 'https://github.com/farhanhussainleo/ai-customer-support-email'],
+      ['Read the walkthrough', 'https://techcommunity.microsoft.com/blog/azurecommunicationservicesblog/build-an-ai-email-responder-with-openai-and-azure-communication-services/4421127'],
+    ],
+  },
+  {
+    id: 'pose', tab: 'ML meets animation', category: 'Personal project · ProtoRes + FABRIK',
+    title: 'Bringing model predictions into motion.',
+    description: 'Connecting Unity with Python and ONNX inference to explore character posing. Explore how machine learning and inverse kinematics come together in the code.',
+    tags: ['Unity / C#', 'Python', 'ONNX'],
+    links: [['Explore the project', 'https://github.com/farhanleo23/ProtoResFABRIK']],
+  },
+];
+---
+<section id="projects" class="project-showcase mb-16 scroll-mt-8 md:mb-20" aria-labelledby="projects-heading">
+  <div class="mb-7">
+    <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-indigo-600">Behind the tutorials</p>
+    <h2 id="projects-heading" class="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">A few things I’ve worked on</h2>
+  </div>
+  <div class="project-tabs" aria-label="Choose a project">
+    {projects.map((project, index) => <button type="button" id={`tab-${project.id}`} data-project={project.id} aria-controls={`panel-${project.id}`} aria-pressed={index === 0}>{project.tab}</button>)}
+  </div>
+  {projects.map((project) => (
+    <article id={`panel-${project.id}`} class="project-panel" data-project-panel={project.id} aria-labelledby={`title-${project.id}`}>
+      <div class="project-media">
+        {project.video ? (
+          <div class="project-video" data-video={project.video}>
+            <button type="button" class="video-launch" aria-label={`Play: ${project.caption}`}>
+              <img src={project.image} width="480" height="360" alt={project.caption} loading="lazy" />
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-caption">{project.caption} <span aria-hidden="true">↗</span></span>
+            </button>
+            <noscript><a href={`https://www.youtube.com/watch?v=${project.video}`}>Watch on YouTube</a></noscript>
+          </div>
+        ) : project.id === 'support' ? (
+          <div class="email-walkthrough">
+            <div class="email-demo-heading"><span>Support inbox</span><span>Sample walkthrough</span></div>
+            <div class="email-steps" aria-label="Explore the email workflow">
+              <button type="button" data-email-step="0" aria-pressed="true">1. Question</button>
+              <button type="button" data-email-step="1" aria-pressed="false">2. Draft</button>
+              <button type="button" data-email-step="2" aria-pressed="false">3. Review</button>
+            </div>
+            <div class="email-example" aria-live="polite">
+              <p class="email-subject">Subject: Help signing in</p>
+              <p data-email-content>“I forgot my password. How can I get back into my account?”</p>
+            </div>
+            <p class="email-explanation" data-email-explanation>Start with a customer’s question. Select the next step to follow it through the app.</p>
+          </div>
+        ) : (
+          <figure class="pose-workflow">
+            <figcaption>From pose input to model output</figcaption>
+            <ol>
+              <li><span>01</span><div><strong>Set a pose</strong><small>Unity · C#</small></div></li>
+              <li><span>02</span><div><strong>Run inference</strong><small>Python · ONNX</small></div></li>
+              <li><span>03</span><div><strong>Bring it back to Unity</strong><small>ProtoRes + FABRIK</small></div></li>
+            </ol>
+          </figure>
+        )}
+      </div>
+      <div class="project-copy">
+        <p class="project-category">{project.category}</p>
+        <h3 id={`title-${project.id}`}>{project.title}</h3>
+        <p class="project-description">{project.description}</p>
+        <ul class="project-tags" aria-label="Technologies">{project.tags.map(tag => <li>{tag}</li>)}</ul>
+        <div class="project-actions">{project.links.map(([label, url]) => <a href={url} target="_blank" rel="noopener noreferrer">{label} <span aria-hidden="true">↗</span></a>)}</div>
+      </div>
+    </article>
+  ))}
+</section>
+
+<script>
+  const showcase = document.querySelector<HTMLElement>('.project-showcase');
+  if (showcase) {
+    const buttons = [...showcase.querySelectorAll<HTMLButtonElement>('[data-project]')];
+    const panels = [...showcase.querySelectorAll<HTMLElement>('[data-project-panel]')];
+    const select = (id: string) => {
+      buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.project === id)));
+      panels.forEach(panel => {
+        panel.hidden = panel.dataset.projectPanel !== id;
+        // Restore the poster when leaving a project so hidden video never keeps playing.
+        if (panel.hidden) {
+          panel.querySelector('iframe')?.remove();
+          const poster = panel.querySelector<HTMLButtonElement>('.video-launch');
+          if (poster) poster.hidden = false;
+        }
+      });
+    };
+    select('agents');
+    buttons.forEach((button, index) => {
+      button.addEventListener('click', () => select(button.dataset.project!));
+      button.addEventListener('keydown', event => {
+        let next = index;
+        if (event.key === 'ArrowRight') next = (index + 1) % buttons.length;
+        else if (event.key === 'ArrowLeft') next = (index - 1 + buttons.length) % buttons.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = buttons.length - 1;
+        else return;
+        event.preventDefault(); buttons[next].focus(); select(buttons[next].dataset.project!);
+      });
+    });
+    showcase.querySelectorAll<HTMLElement>('[data-video]').forEach(video => {
+      const button = video.querySelector<HTMLButtonElement>('button')!;
+      button.addEventListener('click', () => {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${video.dataset.video}?autoplay=1`;
+        iframe.title = button.getAttribute('aria-label') || 'Project demo video';
+        iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        iframe.allowFullscreen = true;
+        button.hidden = true; video.append(iframe); iframe.focus();
+      });
+    });
+    const samples = [
+      ['“I forgot my password. How can I get back into my account?”', 'Start with a customer’s question. Select the next step to follow it through the app.'],
+      ['“Hi! Use the Forgot password link on the sign-in page to request a reset email.”', 'Illustrative draft: in the actual app, Azure OpenAI generates a response from the customer’s question.'],
+      ['Check the details. Make it sound like you. Then choose whether to send.', 'The actual app lets you edit the draft before a separate send action. This walkthrough does not generate or send email.'],
+    ];
+    showcase.querySelectorAll<HTMLButtonElement>('[data-email-step]').forEach(button => {
+      button.addEventListener('click', () => {
+        showcase.querySelectorAll('[data-email-step]').forEach(step => step.setAttribute('aria-pressed', String(step === button)));
+        const [content, explanation] = samples[Number(button.dataset.emailStep)];
+        showcase.querySelector('[data-email-content]')!.textContent = content;
+        showcase.querySelector('[data-email-explanation]')!.textContent = explanation;
+      });
+    });
+  }
+</script>

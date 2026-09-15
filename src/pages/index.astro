@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ProjectCaseStudies from '../components/ProjectCaseStudies.astro';
+import MorakFeature from '../components/MorakFeature.astro';
 ---
 
 <Layout
@@ -107,7 +109,7 @@ import Layout from '../layouts/Layout.astro';
 				</h2>
 			</div>
 			<p class="max-w-sm text-sm leading-relaxed text-slate-500">
-				From a working AI agent to a step-by-step tutorial: a selection of what I build and teach.
+				More hands-on walkthroughs for developers working with AI agents and local models.
 			</p>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -187,6 +189,10 @@ import Layout from '../layouts/Layout.astro';
 			</a>
 		</div>
 	</section>
+
+	<MorakFeature />
+
+	<ProjectCaseStudies />
 
 	<!-- Courses Section -->
 	<section class="mb-20 md:mb-24">
